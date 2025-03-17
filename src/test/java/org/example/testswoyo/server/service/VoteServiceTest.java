@@ -72,7 +72,7 @@ class VoteServiceTest {
         String result = voteService.createVote(createVoteRequest);
 
         verify(serverGlobalResponseHandler).sendBadRequest(
-                "Topic title" + createVoteRequest.getTopicTitle() + "does not exist");
+                "Topic title " + createVoteRequest.getTopicTitle() + " does not exist");
     }
 
     @Test
