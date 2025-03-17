@@ -1,13 +1,12 @@
 package org.example.testswoyo.server.service;
 
-import org.example.testswoyo.server.Server;
-import org.example.testswoyo.server.dto.CommonResponse;
+
 import org.example.testswoyo.server.dto.request.AnswerRequestS;
 import org.example.testswoyo.server.entity.Answer;
 import org.example.testswoyo.server.entity.Vote;
 import org.example.testswoyo.server.repository.AnswerRepository;
 import org.example.testswoyo.server.utils.ServerGlobalResponseHandler;
-import org.example.testswoyo.server.utils.ServerResponse;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
@@ -15,7 +14,7 @@ import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
-import java.util.Optional;
+
 
 class AnswerServiceTest {
 

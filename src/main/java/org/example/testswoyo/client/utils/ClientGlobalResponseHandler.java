@@ -45,7 +45,6 @@ public class ClientGlobalResponseHandler {
                         return "Server error";
                     }
 
-                    System.out.println(parent);
 
 
                     if (parent.get().has("response")) {

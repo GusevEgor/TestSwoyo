@@ -98,7 +98,7 @@ public class VoteService {
         Vote vote = getVoteByTitle(deleteVoteRequest.getVoteTitle());
         if (!vote.getUser().getName().equals(deleteVoteRequest.getUsername())) {
             return serverGlobalResponseHandler.sendBadRequest(
-                    "User " + deleteVoteRequest.getUsername() + " cannot delete vote" + deleteVoteRequest.getVoteTitle());
+                    "User " + deleteVoteRequest.getUsername() + " cannot delete vote " + deleteVoteRequest.getVoteTitle());
         }
 
         log.info("Deleting vote {} with title: {}", vote, vote.getTitle());

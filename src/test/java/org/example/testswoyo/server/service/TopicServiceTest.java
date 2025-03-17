@@ -4,7 +4,6 @@ import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.example.testswoyo.server.dto.request.CreateTopicRequest;
-import org.example.testswoyo.server.dto.request.CreateVoteRequestS;
 import org.example.testswoyo.server.dto.request.ViewTopicRequest;
 import org.example.testswoyo.server.dto.response.AllTopicResponse;
 import org.example.testswoyo.server.dto.response.SmallTopicResponse;
@@ -18,7 +17,6 @@ import org.example.testswoyo.server.utils.ServerGlobalResponseHandler;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 import java.util.stream.Collectors;

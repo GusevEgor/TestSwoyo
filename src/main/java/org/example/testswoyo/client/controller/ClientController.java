@@ -161,7 +161,12 @@ public class ClientController {
         }
 
         System.out.println("Enter the number of answers:");
-        Integer numberOfAnswers = scanner.nextInt();
+        String stringNumberOfAnswers = scanner.nextLine().trim();
+        if (stringNumberOfAnswers.isEmpty() || !isNumber(stringNumberOfAnswers)) {
+            System.out.println("Number of answers must be a number. Please, try again.");
+            return;
+        }
+        Integer numberOfAnswers = Integer.parseInt(stringNumberOfAnswers);
         if (numberOfAnswers <= 0) {
             System.out.println("Number of answers must be greater than 0. Please, try again.");
             return;
@@ -172,7 +177,7 @@ public class ClientController {
         List<String> answers = new ArrayList<>();
         for (int i = 0; i < numberOfAnswers; i++) {
             System.out.println("Answer " + (i + 1) + ": ");
-            String answer = scanner.nextLine();
+            String answer = scanner.nextLine().trim();
             if (!answer.isEmpty()) {
                 answers.add(answer);
             } else {
@@ -196,4 +201,13 @@ public class ClientController {
         System.out.println("topic " + topic + " Vote " + vote);
         return Arrays.asList(topic, vote);
     }
-};
+
+    public boolean isNumber(String str) {
+        try {
+            Integer.parseInt(str);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+}
